@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<title>pop</title>
+	<link rel="stylesheet" type="text/css" href="pop.css">
+	<style type="text/css" media="screen">
+		.demo{
+			width: 100px;line-height: 40px;box-shadow: 0 0 2px #000;margin: 20px auto;text-align: center;
+		}
+	</style>
+</head>
+<body>
+<div class='atoast demo'>toast</div>
+<div class='confirm demo'>confirm</div>
+
+<script type="text/javascript" src="pop.js"></script>
+<script type="text/javascript">
+document.querySelector('.atoast').onclick = function () {
+	var mtos = new Toast({text:'我的天啊啊好好 什么正文，中讲啦你开心吗哈哈哈哈哈',type:'othe',callback:ash});
+	mtos.create();			
+}
+
+function ash () {
+	console.log('ahhahah13566')
+}
+
+document.querySelector('.confirm').onclick = function () {
+
+var confim = new Confirm({content:'我的天啊啊好好 什么正文，中讲啦你开心吗哈哈哈哈哈',title:'中奖通知',cancel:'放弃',sub:'领奖',cancelCall:cancelBook,subCall:subBook})
+	confim.create();
+}
+
+function cancelBook() {
+	console.log('quxaio')
+}
+
+function subBook() {
+	console.log('qudingla')
+}
+
+</script>
+</body>
+</html>
+

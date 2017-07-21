@@ -1,0 +1,100 @@
+html, body, menu, ul, ol, li, p, div, form, h1, h2, h3, h4, h5, h6, img, a img, input, textarea, fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+h1, h2, h3, h4, h5 {
+	font-weight: normal;
+}
+ul li {
+	list-style: none;
+}
+a {
+	color: #333;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a, img, i, span, li {
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+}
+div {
+	-webkit-tap-highlight-color: transparent;
+}
+
+.toast-wrap {
+	background: rgba(243, 152, 0, .9);
+	color: #fff;
+	width: 60%;
+	position: fixed;
+	left: 20%;
+	top: 40%;
+	text-align: center;
+	font-size: 14px;
+	line-height: 24px;
+	border-radius: 6px;
+	z-index: 90;
+}
+.toast-content{
+	line-height: 24px;padding-top:10px;padding-bottom: 10px; 
+}
+.toast-btn{
+	border-top:1px solid #ccc;line-height: 36px;
+}
+.modal-cover{
+	background: rgba(0, 0, 0, .4);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 90;
+}
+
+.confirm-wrap {
+	background: #fff;
+	width: 80%;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+	font-size: 14px;
+	border-radius: 6px;
+	z-index: 91;
+}
+
+.confirm-title{
+	font-size: 16px;
+	text-align: center;
+	color:#333;
+	font-weight: bold;
+	padding-top:10px;
+	line-height: 30px;
+}
+
+.confirm-content{
+	font-size: 14px;
+	color:#333;
+	line-height: 24px;
+	padding:6px 10px 15px;
+}
+
+.confirm-foot div{
+	font-size: 14px;
+	line-height: 38px;
+	width: 50%;
+	float: left;
+	text-align: center;
+	box-sizing:border-box;
+	border-top:1px solid #ccc
+}
+.confirm-foot div:first-child{
+	border-right:1px solid #ccc;
+	color:#666;
+}
+.confirm-foot div:last-child{
+	color:#ec7309
+}
