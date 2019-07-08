@@ -1,6 +1,6 @@
 var Toast = function(options) {
     this.dft = {
-        class: "toast-wrap",
+        clas: "toast-wrap",
         text: "",
         outTime: 1500,
         fadeTime: 600,
@@ -16,14 +16,14 @@ Toast.prototype = {
         if (this.dft.type == 'toast') {
             var adTxt = document.createElement('div'),
                 adcont = document.createElement('div');
-            adTxt.className = this.dft.class;
+            adTxt.className = this.dft.clas;
             adcont.className = 'toast-content';
             adcont.innerHTML = this.dft.text;
             document.body.appendChild(adTxt);
             adTxt.appendChild(adcont);
             var _this = this;
             setTimeout(function() {
-                var node = document.querySelector('.' + _this.dft.class);
+                var node = document.querySelector('.' + _this.dft.clas);
                 fadeOut(node)
                 node.parentNode.removeChild(node);
             }, _this.dft.outTime)
@@ -31,7 +31,7 @@ Toast.prototype = {
             var adTxt = document.createElement('div'),
                 adcont = document.createElement('div'),
                 adbtn = document.createElement('div');
-            adTxt.className = this.dft.class;
+            adTxt.className = this.dft.clas;
 
             adcont.className = 'toast-content';
             adcont.innerHTML = this.dft.text;
@@ -47,7 +47,7 @@ Toast.prototype = {
         }
     },
     close: function() {
-        var node = document.querySelector('.' + this.dft.class);
+        var node = document.querySelector('.' + this.dft.clas);
         fadeOut(node)
         node.parentNode.removeChild(node);
         if (this.dft.callback) {
@@ -58,7 +58,7 @@ Toast.prototype = {
 
 var Confirm = function(options) {
     this.dft = {
-        class: 'confirm-wrap',
+        clas: 'confirm-wrap',
         cover: true,
         title: '标题',
         content: '正文',
@@ -82,7 +82,7 @@ Confirm.prototype = {
             abright = document.createElement('div');
         amodal.className = this.dft.wrap;
 
-        awrap.className = this.dft.class;
+        awrap.className = this.dft.clas;
 
         atitle.className = 'confirm-title';
         atitle.innerHTML = this.dft.title;
@@ -131,7 +131,7 @@ Confirm.prototype = {
             fadeOut(node)
             node.parentNode.removeChild(node);
         } else {
-            var node = document.querySelector('.' + this.dft.class);
+            var node = document.querySelector('.' + this.dft.clas);
             fadeOut(node)
             node.parentNode.removeChild(node);
         }

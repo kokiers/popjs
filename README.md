@@ -1,24 +1,61 @@
 
-# Toast
+#### Toast
 
-默认type:toast; 自动关闭弹窗。
++ clas: "toast-wrap",
++ text: "",
++ outTime: 1500,
++ fadeTime: 600,
++ type: 'toast',
++ btn: '好的',
++ callback: null,
 
-type 为其他，需要手动关闭文字弹窗，可以传入回调函数。
+默认 提示 ，1500s 自动关闭
 ```
-var toastDemo = new Toast({text:'我的天啊啊好好 什么正文，中讲啦你开心吗哈哈哈哈哈'});
-	toastDemo.create
-```	
-
-# Confirm
-
-cover 为true 有弹窗遮罩背景。
-关闭弹窗，可以传入回调函数。
+var toast = new Toast({text:'确定要继续吗？'});
+toast.create();
 ```
-var confDemo = new Confirm({content:'我的天啊啊好好 么正文，中讲啦你开心吗哈哈哈哈哈',title:'中奖通知',cancel:'放弃',sub:'领奖'});
-	confDemo.create();
+ 
+
+ 默认 提示 ，1500s 自动关闭
 ```
+var toast = new Toast({text:'确定要继续吗？',type:'noToast',callback:afterToast});
+toast.create();
 
+function afterToast () {
+    console.log('yes');
+}
+```
+ 
 
+### Confirm
 
++ clas: 'confirm-wrap',
++ cover: true,
++ title: '标题',
++ content: '正文',
++ cancel: 'cancel',
++ sub: 'ok',
++ html: '',
++ wrap: 'modal-cover',
++ cancelCall: null,
++ subCall: null,
 
+ ```
+var confim = new Confirm({
+    content:'您已经中奖了',
+    title:'中奖通知',
+    cancel:'放弃',
+    sub:'领奖',
+    cancelCall:cancelTap,
+    subCall:subTap
+    })
+    confim.create();
 
+function cancelTap () {
+    console.log('no');
+}
+
+function subTap () {
+    console.log('yes');
+}
+ ```
